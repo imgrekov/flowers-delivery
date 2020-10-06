@@ -1,0 +1,14 @@
+{
+	"name": "flowers-delivery",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {},
+	"keywords": [
+		"study",
+		"flowers",
+		"glo_academy"
+	],
+	"author": "Gregory Grekov <d9fgrek@gmail.com>",
+	"license": "ISC"
+}
