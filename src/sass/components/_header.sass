@@ -1,0 +1,58 @@
+.navbar
+  display: flex
+  align-items: center
+  justify-content: space-between
+  padding-top: 50px
+  margin-bottom: 120px
+  &__item
+    &_col
+      display: inline-flex
+      flex-direction: column
+      text-align: right
+  &__link
+    color: $color-link-header
+    line-height: 1
+    text-decoration: underline
+    +trs
+    &:hover
+      color: lighten($color-link-header, 10%)
+      text-decoration: none
+      +trs
+    &-phone
+      color: #ffffff
+      font-size: 1.25rem
+      +medium
+      &:hover
+        color: #fefefe
+        text-decoration: none
+  &__text
+    display: inline-block
+    max-width: 165px
+    vertical-align: middle
+    line-height: 1.2
+    +light
+    span
+      color: #ff3469
+      font-weight: 500
+    &-phone
+      margin-bottom: 0.875rem
+      font-size: 12px
+      max-width: 100%
+      +regular
+  &__image
+    display: inline-block
+    margin-right: 42px
+
+@media screen and ( max-width: 768px )
+  .navbar
+    flex-direction: column
+    align-items: center
+    &__item
+      &:not(:last-child)
+        margin-bottom: 1.5rem
+      &_col
+        display: none
+
+@media screen and ( max-width: 576px )
+  .navbar__image
+    margin-right: 1.5rem

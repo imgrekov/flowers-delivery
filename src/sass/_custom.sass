@@ -1,4 +1,38 @@
+html
+  cursor: default
+
 body
-  font-family: 'Roboto', sans-serif
+  // font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+  font-family: 'Gotham Pro Regular', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
   font-size: 16px
   font-weight: normal
+  background-color: $main-bg
+  color: $color-white
+
+.container,
+.container-fluid,
+.container-sm,
+.container-md,
+.container-lg,
+.container-xl
+  width: 100%
+  padding-right: 15px
+  padding-left: 15px
+  margin-right: auto
+  margin-left: auto
+
+@media (min-width: 576px)
+  .container, .container-sm
+    max-width: 540px
+
+@media (min-width: 768px)
+  .container, .container-sm, .container-md
+    max-width: 720px
+
+@media (min-width: 992px)
+  .container, .container-sm, .container-md, .container-lg
+    max-width: 960px
+
+@media (min-width: 1200px)
+  .container, .container-sm, .container-md, .container-lg, .container-xl
+    max-width: 1140px
