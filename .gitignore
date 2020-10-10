@@ -4,6 +4,8 @@
 
 ### Custom ###
 *.zip
+dist/
+.cache/
 
 ### Node ###
 # Logs

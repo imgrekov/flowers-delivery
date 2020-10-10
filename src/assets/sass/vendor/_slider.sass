@@ -1,0 +1,73 @@
+
+.header
+  &-slider
+    position: relative
+    &__slides
+      user-select: none
+    &__items
+    &__item
+      text-align: center
+      padding: 0.75rem
+      +trs
+      &:hover
+        +trs
+        .header-slider__image
+          &::after
+            background: url('../images/slider/bg/bg_hover.png') center / cover no-repeat
+
+    &__image
+      position: relative
+      z-index: 3
+      &::after
+        content: ''
+        display: block
+        position: absolute
+        top: 0
+        left: 50%
+        transform: translateX(-50%)
+        width: 90px
+        height: 90px
+        background: url('../images/slider/bg/bg.png') center / cover no-repeat
+        z-index: -1
+        +trs
+      img
+        max-width: 100%
+        object-fit: cover
+
+    &__controls
+      &_prev,
+      &_next
+        display: block
+        height: 100%
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        background-color: transparent
+        border: transparent
+        &:focus
+          outline: none
+      &_prev
+        left: -1.5rem
+        background: url('../images/slider/controls/prev.svg') center no-repeat
+        +trs
+        &:hover
+          background: url('../images/slider/controls/prev_hover.svg') center no-repeat
+          +trs
+      &_next
+        right: -1.5rem
+        background: url('../images/slider/controls/next.svg') center no-repeat
+        +trs
+        &:hover
+          background: url('../images/slider/controls/next_hover.svg') center no-repeat
+          +trs
+  &__slider
+    margin-bottom: 80px
+
+@media screen and ( max-width: 576px )
+  .header
+    &-slider
+      &__controls
+        &_prev
+          left: 0
+        &_next
+          right: 0

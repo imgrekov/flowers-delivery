@@ -3,12 +3,24 @@
 	"version": "1.0.0",
 	"description": "",
 	"main": "index.js",
-	"scripts": {},
+	"scripts": {
+		"dev": "rm -rf dist && rm -rf .cache && parcel src/index.html",
+		"build": "rm -rf public && rm -rf .cache && parcel build src/index.html -d ./public/",
+		"clear": "rm -rf public && rm -rf .cache"
+	},
 	"keywords": [
 		"study",
 		"flowers",
 		"glo_academy"
 	],
 	"author": "Gregory Grekov <d9fgrek@gmail.com>",
-	"license": "ISC"
+	"license": "ISC",
+	"devDependencies": {
+		"parcel-bundler": "^1.12.4",
+		"sass": "^1.27.0"
+	},
+	"dependencies": {
+		"@glidejs/glide": "^3.4.1",
+		"jquery": "^3.5.1"
+	}
 }
