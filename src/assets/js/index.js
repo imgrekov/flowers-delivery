@@ -1,4 +1,6 @@
 import '../sass/style.sass'
-import { slider } from './components/slider'
+import { flowersSlider, reviewsSlider } from './components/slider'
 
-slider()
+flowersSlider()
+
+reviewsSlider()

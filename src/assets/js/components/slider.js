@@ -1,6 +1,6 @@
 import Glide from '@glidejs/glide'
 
-export const slider = () =>
+export const flowersSlider = () =>
 	new Glide('.header-slider', {
 		type: 'carousel',
 		startAt: 0,
@@ -17,4 +17,11 @@ export const slider = () =>
 				perView: 1,
 			},
 		},
+	}).mount()
+
+export const reviewsSlider = () =>
+	new Glide('.reviews-slider', {
+		type: 'carousel',
+		startAt: 0,
+		perView: 1,
 	}).mount()
