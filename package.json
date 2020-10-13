@@ -6,7 +6,7 @@
 	"scripts": {
 		"dev": "rm -rf dist && rm -rf .cache && parcel src/index.html",
 		"build": "rm -rf public && rm -rf .cache && parcel build src/index.html -d ./public/",
-		"clear": "rm -rf public && rm -rf dist && rm -rf .cache"
+		"clean": "rm -rf public && rm -rf dist && rm -rf .cache"
 	},
 	"keywords": [
 		"study",
