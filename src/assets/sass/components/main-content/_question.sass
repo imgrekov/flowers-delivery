@@ -1,0 +1,81 @@
+.question
+  padding-top: 100px
+  padding-bottom: 84px
+  background-color: #1a1a1a
+  text-align: center
+  &__title,
+  &__link
+    text-transform: uppercase
+    font-size: 1.875rem
+    line-height: 1
+    +medium
+  &__title
+    margin-bottom: 24px
+  &__link
+    margin-bottom: 50px
+    a
+      position: relative
+      display: inline-block
+      color: $color-white
+      +trs
+      &:hover
+        text-decoration: none
+        +trs
+        &::after
+          bottom: -4px
+          height: 2px
+          +trs
+      &::after
+        content: ''
+        position: absolute
+        bottom: 0
+        left: 0
+        display: block
+        width: 100%
+        height: 1px
+        margin-top: 10px
+        background-color: $color-white
+        +trs
+  &__phone
+    span
+      margin-bottom: 22px
+      display: block
+      font-size: 0.875rem
+    p
+      margin-bottom: 0
+      a
+        color: $color-white
+        font-size: 2.25rem
+
+@media screen and ( max-width: 768px )
+  .question
+    padding: 60px 0
+    &__title
+      font-size: 1.75rem
+      margin-bottom: 15px
+    &__link
+      font-size: 1.25rem
+      margin-bottom: 36px
+    &__phone
+      span
+        margin-bottom: 12px
+      p
+        a
+          font-size: 1.875em
+
+@media screen and ( max-width: 576px )
+  .question
+    padding: 32px 0
+    &__title
+      font-size: 1.25rem
+      margin-bottom: 8px
+    &__link
+      font-size: 1rem
+      margin-bottom: 32px
+    &__phone
+      span
+        margin-bottom: 12px
+        font-size: 1rem
+      p
+        a
+          font-size: 1.25rem
