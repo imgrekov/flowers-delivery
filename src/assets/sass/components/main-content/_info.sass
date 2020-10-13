@@ -1,0 +1,79 @@
+.info
+  padding-top: 55px
+  padding-bottom: 40px
+  display: flex
+  justify-content: space-between
+  align-items: center
+  &__links
+    a
+      position: relative
+      margin-right: 30px
+      color: $color-white
+      +trs
+      &:last-child
+        margin-right: 0
+      &::after
+        content: ''
+        position: absolute
+        left: 0
+        bottom: 0
+        display: block
+        width: 100%
+        height: 1px
+        margin-top: 3px
+        background-color: #fff
+        +trs
+      &:hover
+        text-decoration: none
+        +trs
+        &::after
+          bottom: -4px
+          height: 2px
+          +trs
+    span
+      display: block
+      margin-top: 30px
+      a
+        display: inline-block
+        margin-left: 20px
+  &__phone
+    text-align: right
+    line-height: 1
+    a
+      display: block
+      margin-bottom: 12px
+      font-size: 1.5rem
+      color: $color-white
+      +medium
+    span
+      margin-bottom: 12px
+      display: block
+      font-size: 0.875rem
+      &:last-child
+        margin-bottom: 0
+
+@media screen and ( max-width: 768px )
+.info
+  &__links
+    span
+      margin-top: 15px
+      a
+        margin-left: 10px
+
+    a
+      margin-right: 15px
+  &__phone
+    span, a
+      margin-bottom: 8px
+
+@media screen and ( max-width: 576px )
+  .info
+    padding: 20px 0
+    flex-direction: column
+    text-align: center
+    &__links
+      span
+        margin-top: 8px
+        margin-bottom: 24px
+    &__phone
+      text-align: center
