@@ -1,0 +1,40 @@
+.features
+  margin-bottom: 100px
+  &__wrap
+    display: flex
+    align-items: flex-start
+    justify-content: center
+  &__item
+    text-align: center
+    margin-right: 85px
+    &:last-child
+      margin-right: 0
+    img
+      display: inline-block
+      margin-bottom: 30px
+    p
+      margin-bottom: 0
+      max-width: 270px
+      font-size: 1.25rem
+      line-height: 1.563rem
+      +medium
+
+@media screen and ( max-width: 768px )
+  .features
+    margin-bottom: 60px
+    &__wrap
+      flex-direction: column
+      align-items: center
+    &__item
+      margin-right: 0
+      margin-bottom: 30px
+      &:last-child
+        margin-bottom: 0
+      img
+        margin-bottom: 15px
+      p
+        margin-bottom: 0
+
+@media screen and ( max-width: 576px )
+  .features
+    margin-bottom: 40px
