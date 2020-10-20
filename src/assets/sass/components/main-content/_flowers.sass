@@ -14,7 +14,7 @@
   &__cards
     display: flex
     align-items: center
-    justify-content: space-between
+    justify-content: space-around
     flex-wrap: wrap
     margin-bottom: 50px
   &__card
@@ -23,7 +23,7 @@
     padding: 30px 35px
     text-align: center
     border: 0.188rem solid $color-white
-    &:last-child
+    &:nth-last-child(-n+4)
       margin-bottom: 0
     span
       display: block
@@ -64,12 +64,8 @@
         &:hover
           transform: translateY(-1px)
           box-shadow: 0 2px 6px #cccccccc
-
       input
         display: none
-        &:selected
-          .flowers__card-color label
-            background-color: green
     &-qty
       margin-bottom: 20px
       &-wrap

@@ -1,8 +1,8 @@
 import Glide from '@glidejs/glide'
 
-export const flowersSlider = () =>
-	new Glide('.header-slider', {
-		type: 'carousel',
+export const flowersSlider = (element, options = { type: 'slider' }) =>
+	new Glide(element, {
+		type: options.type,
 		startAt: 0,
 		perView: 6,
 		autoplay: 7000,
@@ -19,9 +19,9 @@ export const flowersSlider = () =>
 		},
 	}).mount()
 
-export const reviewsSlider = () =>
-	new Glide('.reviews-slider', {
-		type: 'carousel',
+export const reviewsSlider = (element, options = { type: 'slider' }) =>
+	new Glide(element, {
+		type: options.type,
 		startAt: 0,
 		perView: 1,
 	}).mount()

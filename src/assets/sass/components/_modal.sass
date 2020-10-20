@@ -1,0 +1,71 @@
+.mymodal.open .modal-overlay
+  opacity: 1
+  +trs
+
+.modal
+  &-overlay
+    opacity: 0
+    position: fixed
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    background-color: rgba(#000000, 0.5)
+    +trs
+    .open
+      opacity: 1
+      +trs
+  &-body
+    position: absolute
+    top: 100px
+    left: 50%
+    padding: 40px 65px
+    max-width: 520px
+    transform: translateX(-50%)
+    background-color: $color-modal-bg
+    &::before
+      content: ''
+      position: absolute
+      top: 0
+      right: 0
+      display: block
+      width: 110px
+      height: 95px
+      background: url(../images/modal/top-rose.png) center bottom / cover no-repeat
+
+    &::after
+      content: ''
+      position: absolute
+      bottom: 0
+      left: 0
+      display: block
+      width: 60px
+      height: 60px
+      background: url(../images/modal/bottom-rose.png) center bottom / cover no-repeat
+
+  &__title
+    margin-bottom: 30px
+    color: $color-modal-title
+    font-size: 1.5rem
+    text-transform: uppercase
+    letter-spacing: 0.015rem
+    +medium
+  &__desc
+    margin-bottom: 0
+    color: $color-modal-desc
+  &__close
+    position: absolute
+    top: 0
+    right: -50px
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 40px
+    height: 40px
+    padding: 5px
+    border-radius: 50%
+    font-size: 28px
+    color: #ffffff
+    background-color: transparent
+    border: 0.125rem solid #ffffff
+    +light
